@@ -45,7 +45,7 @@ Pour indiquer où se trouve le fichier de travail, deux solutions sont possibles
 * ou bien directement dans `R` avec la commande `setwd` (pour *Set working directory*), qui s'utilise de cette manière.
 
 ```{r}
-setwd("~/GitHub/Cours_2020_UniGE/Cours_Geneve_5")
+setwd("/cloud")
 #je charge les données que l'enseignant a préparé pour éviter les problèmes
 #load("Cours_Geneve_5.RData")
 ```
@@ -74,7 +74,7 @@ Il ne nous reste plus qu'à lancer stylo, avec la commande… `stylo()`!
 L'application `Stylo` peut être utilisée en ligne de commande, mais aussi avec une GUI (*graphical user interface*, en français "interface graphique"). Si vous voulez avoir un premier aperçu, retirez le # au début de la ligne *infra* et cliquez sur `Run`.
 
 ```{r}
-stylo()
+#stylo()
 ```
 
 ##2.2 Une première analyse de cluster
@@ -86,7 +86,7 @@ Nous allons désormais tenter une première analyse de cluster. Le *data cluster
 Lorsque vous appuyerez sur `Run` observez la console: une série de messages vous avertit de ce qu'il se passe.
 
 ```{r}
-stylo(gui=TRUE, corpus.dir = "corpus",
+stylo(gui=FALSE, corpus.dir = "corpus",
       corpus.format = "xml.drama", corpus.lang = "French",
       analyzed.features = "w", mfw.min = 100, mfw.max = 100, mfw.incr=100,
       analysis.type = "CA", distance.measure = "manhattan",
